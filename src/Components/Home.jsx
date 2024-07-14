@@ -1,30 +1,28 @@
 import React, { useState } from "react";
-// import SignUp from "./SignUp";
 import Login from "./Login";
-import googleLoginBtn from "/google-signin-btn.webp";
 import { Link } from "react-router-dom";
-
-import { auth } from "../firebase/firebase";
-import {
-  GoogleAuthProvider,
-  signInWithPopup,
-  onAuthStateChanged,
-} from "firebase/auth";
+// import { auth } from "../firebase/firebase";
+// import {
+//   GoogleAuthProvider,
+//   signInWithPopup,
+//   onAuthStateChanged,
+// } from "firebase/auth";
 import SignUp from "./SignUp";
+import GloginBtn from "./GloginBtn";
 
 export default function Home() {
   const [showLogin, setShowLogin] = useState(true);
 
-  const googleLogin = () => {
-    const provider = new GoogleAuthProvider();
-    signInWithPopup(auth, provider);
-    // .then((result) => {
-    //   setUser(result.user);
-    // })
-    // .catch((error) => {
-    //   console.error("Error during login: ", error);
-    // });
-  };
+  // const googleLogin = () => {
+  //   const provider = new GoogleAuthProvider();
+  //   signInWithPopup(auth, provider);
+  //   // .then((result) => {
+  //   //   setUser(result.user);
+  //   // })
+  //   // .catch((error) => {
+  //   //   console.error("Error during login: ", error);
+  //   // });
+  // };
 
   const toLogIn = () => {
     setShowLogin(true);
@@ -61,9 +59,7 @@ export default function Home() {
         <p>------- or -------</p>
 
         <Link to="/userProfile">
-          <div onClick={googleLogin} className=" w-max h-max cursor-pointer">
-            <img src={googleLoginBtn} className=" w-80 h-14 rounded-md" />
-          </div>
+          <GloginBtn />
         </Link>
       </div>
     </div>
