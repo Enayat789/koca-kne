@@ -1,28 +1,11 @@
 import React, { useState } from "react";
 import Login from "./Login";
 import { Link } from "react-router-dom";
-// import { auth } from "../firebase/firebase";
-// import {
-//   GoogleAuthProvider,
-//   signInWithPopup,
-//   onAuthStateChanged,
-// } from "firebase/auth";
 import SignUp from "./SignUp";
 import GloginBtn from "./GloginBtn";
 
 export default function Home() {
   const [showLogin, setShowLogin] = useState(true);
-
-  // const googleLogin = () => {
-  //   const provider = new GoogleAuthProvider();
-  //   signInWithPopup(auth, provider);
-  //   // .then((result) => {
-  //   //   setUser(result.user);
-  //   // })
-  //   // .catch((error) => {
-  //   //   console.error("Error during login: ", error);
-  //   // });
-  // };
 
   const toLogIn = () => {
     setShowLogin(true);
@@ -32,8 +15,8 @@ export default function Home() {
   };
 
   return (
-    <div className="w-full h-[100vh] flex justify-center items-center">
-      <div className=" bg-slate-400 w-full size-auto p-4 gap-2 flex flex-col justify-start items-center rounded-md">
+    <div className="w-[100vw] h-5/6 flex justify-center items-center">
+      <div className=" bg-slate-400 w-min h-auto p-4 gap-2 flex flex-col justify-start items-center rounded-md">
         <div className=" w-full h-max p-2 flex flex-col justify-between items-center gap-4">
           <h2 className=" text-blue-black text-3xl ">Login Form</h2>
 

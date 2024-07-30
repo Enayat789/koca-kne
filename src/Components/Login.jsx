@@ -24,7 +24,6 @@ export default function Login() {
       if (userCredentials.user.providerData[0]) {
         navigate("/userProfile");
       } 
-      // Navigate("/userProfile");
     } catch (error) {
       console.log(error);
     }
