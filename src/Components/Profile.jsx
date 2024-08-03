@@ -3,12 +3,18 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { auth } from "../firebase/firebase";
 import { onAuthStateChanged } from "firebase/auth";
-import GloginBtn from "./GloginBtn";
+import Loader from "./ui/Loader";
+// import GloginBtn from "./GloginBtn";
 
 export default function Profile() {
   const [user, setUser] = useState(null);
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 400);
+
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
@@ -30,6 +36,10 @@ export default function Profile() {
         console.error("Error during logout: ", error);
       });
   };
+
+  if (isLoading) {
+    return <Loader />;
+  }
 
   return (
     <>
