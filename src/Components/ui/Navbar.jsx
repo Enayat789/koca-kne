@@ -21,12 +21,12 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="flex flex-row flex-wrap w-[100vw] p-3 bg-gray-400 px-4 justify-between items-center sticky top-0">
+    <div className="flex flex-row flex-wrap w-[100vw] p-4 px-6 bg-gray-400 justify-between items-center sticky top-0">
       <Link to={"/"}>
         <div className=" text-xl text-black p-2 md:text-2xl">Logo</div>
       </Link>
 
-      <div className="flex-row w-1/3 p-2 list-none justify-evenly items-center hidden sm:flex">
+      <div className="flex-row w-1/3 p-2 list-none text-lg justify-evenly items-center hidden sm:flex">
         <Link to="/">
           <li className=" cursor-pointer hover:text-gray-300 text-black">
             Home
