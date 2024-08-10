@@ -16,11 +16,11 @@ export default function SignInUpForm() {
 
   return (
     <div className="w-[100vw] h-5/6 flex justify-center items-center">
-      <div className=" bg-slate-400 w-min h-auto p-4 gap-2 flex flex-col justify-start items-center rounded-md">
+      <div className=" bg-slate-400 w-max h-auto p-4 gap-2 flex flex-col justify-start items-center rounded-md">
         <div className=" w-full h-max p-2 flex flex-col justify-between items-center gap-4">
           <h2 className=" text-blue-black text-3xl ">Login Form</h2>
 
-          <div className=" w-max h-max flex rounded-md gap-2">
+          <div className=" w-max h-max flex rounded-md gap-2 md:gap-14">
             <button
               onClick={toLogIn}
               className="bg-gray-300 w-40 p-2 rounded-2xl text-black"
@@ -41,7 +41,7 @@ export default function SignInUpForm() {
 
         <p>------- or -------</p>
 
-        <Link to="/userProfile">
+        <Link to="/">
           <GloginBtn />
         </Link>
       </div>

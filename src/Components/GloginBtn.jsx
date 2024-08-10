@@ -16,8 +16,8 @@ export default function GloginBtn({ setUser }) {
   };
 
   return (
-    <div onClick={googleLogin} className=" w-max h-max cursor-pointer">
-      <img src={googleLoginBtn} className=" w-80 h-16 rounded-md" />
+    <div onClick={googleLogin} className="w-full flex h-16 cursor-pointer  px-2">
+      <img src={googleLoginBtn} className=" w-96 rounded-md object-fill" />
     </div>
   );
 }

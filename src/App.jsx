@@ -7,6 +7,7 @@ import SignUp from "./Components/SignUp";
 import Profile from "./Components/Profile";
 import Navbar from "./Components/ui/Navbar";
 import SignInUpForm from "./Components/SignInUpForm";
+import Products from "./Components/Products/Products";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/logIn" element={<Login />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/signInUpForm" element={<SignInUpForm />} />
+          <Route path="/products" element={<Products />} />
         </Routes>
       </BrowserRouter>
     </>

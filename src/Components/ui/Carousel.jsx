@@ -8,7 +8,6 @@ export default function Carousel() {
 
   const allImages = Object.keys(slides)[0];
   const singleImage = slides[allImages];
-  // console.log(singleImage.length - 1);
 
   const handleNext = () => {
     setCurrentImageIndex((prevIndex) =>
@@ -23,14 +22,14 @@ export default function Carousel() {
   };
 
   return (
-    <div className=" w-full h-[80vh] flex justify-evenly items-center">
+    <div className=" w-full h-[50vh] mt-1 lg:h-[80vh] flex justify-evenly items-center">
       <FaLessThan
         size={40}
-        className=" cursor-pointer"
+        className=" cursor-pointer hidden md:flex"
         onClick={handlePrevious}
       />
 
-      <div className="flex w-4/5 h-5/6 border-4 overflow-hidden border-gray-400 rounded-lg relative">
+      <div className="flex w-[99%] rounded h-full md:w-4/5  md:h-5/6 md:border-4 overflow-hidden border-gray-400 md:rounded-lg relative">
         {singleImage.map((item, index) => {
           return (
             <div
@@ -51,7 +50,7 @@ export default function Carousel() {
       </div>
       <FaGreaterThan
         size={40}
-        className=" cursor-pointer"
+        className=" cursor-pointer hidden md:flex"
         onClick={handleNext}
       />
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 // import loader from "../../assets/loader3.gif";
-import loader2 from "../../assets/loader.gif";
+import loader2 from "../../assets/loader2.gif";
 
 export default function Loader() {
   return (
