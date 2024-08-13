@@ -16,6 +16,10 @@ export default function Carousel() {
     );
   };
 
+
+
+
+
   const handlePrevious = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? singleImage.length - 1 : prevIndex - 1
