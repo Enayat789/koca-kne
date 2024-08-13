@@ -23,7 +23,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="flex flex-row flex-wrap w-[100vw] p-4 md:px-6 bg-gray-400 justify-between items-center sticky top-0 z-10">
+    <div className="flex flex-row flex-wrap w-[100vw] p-4 md:px-6 bg-gray-400 justify-between items-center sticky top-0 z-50">
       {/* <Link to={"/"}> */}
       <div
         className=" text-xl text-black p-2 md:text-2xl cursor-pointer"
