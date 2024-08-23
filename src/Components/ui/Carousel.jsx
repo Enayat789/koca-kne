@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import slides from "../../utils/carouselData.json";
-import { FaLessThan } from "react-icons/fa";
-import { FaGreaterThan } from "react-icons/fa";
 import { FaChevronCircleRight, FaChevronCircleLeft } from "react-icons/fa";
 
 export default function Carousel() {
@@ -15,10 +13,6 @@ export default function Carousel() {
       prevIndex === singleImage.length - 1 ? 0 : prevIndex + 1
     );
   };
-
-
-
-
 
   const handlePrevious = () => {
     setCurrentImageIndex((prevIndex) =>
@@ -52,13 +46,13 @@ export default function Carousel() {
             </div>
           );
         })}
-        <span className="flex absolute bottom-2 gap-1">
+        <span className="flex absolute bottom-2 gap-2">
           {singleImage.map((_, indx) => {
             return (
               <div
                 key={indx}
                 onClick={() => setCurrentImageIndex(indx)}
-                className={`bg-white w-3 h-3 p-0 md:w-4 md:h-4 border-2 border-none rounded-full outline-none cursor-pointer ${
+                className={`bg-gray-500 w-3 h-3 p-0 md:w-4 md:h-4 border-2 border-none rounded-full outline-none cursor-pointer ${
                   currentImageIndex === indx ? "bg-white" : "bg-gray-500"
                 }`}
               ></div>

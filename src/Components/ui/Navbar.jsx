@@ -51,10 +51,10 @@ export default function Navbar() {
         </HashLink>
       </div>
 
-      <div className=" flex w-auto 2xl:w-[10%] justify-center">
+      <div className="flex w-auto 2xl:w-[10%] justify-end">
         {!user ? (
           <Link to="/signInUpForm">
-            <button className="bg-gray-300 text-black rounded-full hover:bg-white ">
+            <button className="bg-gray-300 text-black rounded-full hover:bg-white outline-none ">
               Signin / Signup
             </button>
           </Link>
@@ -63,7 +63,7 @@ export default function Navbar() {
             <img
               src={user.photoURL || profileIcon}
               alt="profile icon"
-              className=" w-12 rounded-full"
+              className=" w-14 rounded-full"
             />
           </Link>
         )}
